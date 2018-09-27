@@ -9,7 +9,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker
-            .register('/r2d2-sw.js')
+            .register('/r2d2-sw.js', {scope: '.'})
             .then(function() {
                 console.log('Service worker registered?');
             })
